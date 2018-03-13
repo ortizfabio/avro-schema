@@ -1,0 +1,10 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol User {
+
+  @logicalType ("User") record User {
+    string name;
+    union{ int, null} favorite_number;
+    union{ string, null} favorite_color;
+  }
+}

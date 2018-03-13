@@ -1,0 +1,9 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol BoundingBox {
+
+  @logicalType ("BoundingBox") record BoundingBox {
+    array<array<array<float>>> coordinates;
+    string type;
+  }
+}

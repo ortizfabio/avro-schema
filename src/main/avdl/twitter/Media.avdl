@@ -1,0 +1,20 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Media {
+  import idl "Sizes.avdl";
+
+  @LogicalType ("Media") record Media {
+    string display_url;
+    string expanded_url;
+    long id;
+    string id_str;
+    array<int> indices;
+    string media_url;
+    string media_url_https;
+    Sizes sizes;
+    union { null, long } source_status_id;
+    union { null, string } source_status_id_str;
+    string type;
+    string url;
+  }
+}

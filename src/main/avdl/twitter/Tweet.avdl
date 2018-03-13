@@ -1,0 +1,45 @@
+@namespace ("io.bytetrend.twitter")
+//Based on https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/tweet-object
+protocol Tweet {
+  import idl "Contributor.avdl";
+  import idl "Coordinates.avdl";
+  import idl "Entities.avdl";
+  import idl "User.avdl";
+  import idl "Place.avdl";
+
+  @LogicalType ("Tweet") record Tweet {
+
+    union{null,array<Contributor>} contributors;
+    union{null, Coordinates} coordinates;
+    string created_at;
+//    union{null, map<string>} current_user_retweet;
+    Entities entities;
+    union{null, int} favorite_count;
+    union{null, boolean} favorited;
+    string filter_level;
+    long id;
+    string id_str;
+    union{null, string} in_reply_to_screen_name;
+    union{null, long} in_reply_to_status_id;
+    union{null, string} in_reply_to_status_id_str;
+    union{null, long} in_reply_to_user_id;
+    union{null, string} in_reply_to_user_id_str;
+    union{null, string} lang;
+    union{null, Place} place;
+    union{null, boolean} possibly_sensitive;
+    union{null, long} quoted_status_id;
+    union{null, string} quoted_status_id_str;
+    union{null, Tweet} quoted_status;
+    map<string> scopes;
+    union{null, boolean} retweet_count;
+    union{null, boolean} retweeted;
+    union{null, Tweet} retweeted_status;
+    string source;
+    string text;
+    boolean truncated;
+    User user;
+    union{null, boolean} withheldCopyright;
+    union{null, string} withheldInCountries;
+    union {null, string} withheldScope;
+  }
+}

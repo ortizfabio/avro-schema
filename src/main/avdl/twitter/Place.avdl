@@ -1,0 +1,19 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Place {
+  import idl "BoundingBox.avdl";
+
+  @logicalType ("Place") record Place {
+
+    map<string> attributes;
+    BoundingBox bounding_box;
+    string country_type;
+    string country_code;
+    string full_name;
+    string id;
+    string name;
+    string place_type;
+    string url;
+
+  }
+}

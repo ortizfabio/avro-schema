@@ -1,0 +1,9 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Coordinates {
+
+  @LogicalType ("Coordinates") record Coordinates {
+    array<float> items;
+    string type;
+  }
+}

@@ -1,0 +1,11 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Url {
+
+  @logicalType ("Url") record Url {
+    string display_url;
+    string expanded_url;
+    array<int> indices;
+    string url;
+  }
+}

@@ -1,0 +1,10 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Contributor {
+  fixed byte ( 1 );
+  @logicalType ("Contributor") record Contributor {
+    long id;
+    string id_str;
+    string screen_name;
+  }
+}

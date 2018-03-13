@@ -1,0 +1,9 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Hashtag {
+  fixed byte ( 1 );
+  @logicalType ("Hashtag") record Hashtag {
+    array<int> indices;
+    string text;
+  }
+}

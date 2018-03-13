@@ -1,0 +1,10 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Size {
+
+  @logicalType ("Size") record Size {
+    int h;
+    int w;
+    string resize;
+  }
+}

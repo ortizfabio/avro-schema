@@ -1,0 +1,15 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Entities {
+  import idl "Hashtag.avdl";
+  import idl "Media.avdl";
+  import idl "Url.avdl";
+  import idl "UserMention.avdl";
+
+  @LogicalType ("Entities") record Entities {
+    array<Hashtag> hashstags;
+    array<Media> media;
+    array<Url> urls;
+    array<union { null, long }> user_mentions;
+  }
+}

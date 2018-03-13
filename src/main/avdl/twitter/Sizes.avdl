@@ -1,0 +1,12 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol Sizes {
+  import idl "Size.avdl";
+
+  @LogicalType ("Sizes") record Sizes {
+    Size thumb;
+    Size large;
+    Size medium;
+    Size small;
+  }
+}

@@ -1,0 +1,12 @@
+@namespace ("io.bytetrend.twitter")
+
+protocol UserMention {
+
+  @logicalType ("UserMention") record UserMention {
+    long id;
+    string id_str;
+    array<int> indices;
+    string name;
+    string screen_name;
+  }
+}
